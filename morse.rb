@@ -20,3 +20,9 @@ def decode_word(morse_word)
     end
     word
 end
+
+def decode(morse_message)
+    morse_message.split('   ').map { |word| decode_word(word) }.join(' ')
+end
+
+puts decode('.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...')
